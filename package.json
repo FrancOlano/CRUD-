@@ -1,0 +1,27 @@
+{
+  "name": "post",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrancOlano/post.git"
+  },
+  "author": "FrancOlano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrancOlano/post/issues"
+  },
+  "homepage": "https://github.com/FrancOlano/post#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "firebase-admin": "^10.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
