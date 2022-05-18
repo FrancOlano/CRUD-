@@ -60,7 +60,7 @@ app.delete("/usuarios", (req, res)=>{
         });
         
         db.collection("users").doc(id).delete().then(()=>{
-            res.send(usuarioNombre)
+            res.send('eliminado correctamente')
         })
         
     })
