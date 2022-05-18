@@ -24,29 +24,20 @@ app.use(express.json())
 
 // })
 
-// app.post('/usuarios', (req, res)=> {
-//     const usuario = req.body
-//     db.collection("users").add(usuario).then(()=>{
-//         res.send(req.body)
-//     })
-    
-// });
-
 // app.put("/usuarios", (req, res)=>{
-//     const usuarioNombre = req.body
-//     const array = []
-//     const emailFranco = "olanofranco1@gmail.com"
+//     const usuarioNombre = req.body.nombre
+//     let id
+//     const emailUsuario = req.body.email
 //     db.collection("users")
-//     .where("email", "==" , emailFranco)
+//     .where("email", "==" , emailUsuario)
 //     .get()
 //     .then(
 //         (querySnapshot) => {
 //         querySnapshot.forEach((doc) => {
-//             array.push(`${doc.id}`);
-            
+//             id = doc.id
 //         });
         
-//         db.collection("users").doc(array[0]).update({nombre: req.body.nombre}).then(()=>{
+//         db.collection("users").doc(id).update({nombre : usuarioNombre}).then(()=>{
 //             res.send(usuarioNombre)
 //         })
         
@@ -54,21 +45,21 @@ app.use(express.json())
     
     
 // })
+
 app.delete("/usuarios", (req, res)=>{
-    const usuarioNombre = req.body
-    const array = []
-    const emailFranco = "olanofranco1@gmail.com"
+    const usuarioNombre = req.body.nombre
+    let id
+    const emailUsuario = req.body.email
     db.collection("users")
-    .where("email", "==" , emailFranco)
+    .where("email", "==" , emailUsuario)
     .get()
     .then(
         (querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            array.push(`${doc.id}`);
-            
+            id = doc.id
         });
         
-        db.collection("users").doc(array[0]).delete().then(()=>{
+        db.collection("users").doc(id).delete().then(()=>{
             res.send(usuarioNombre)
         })
         
